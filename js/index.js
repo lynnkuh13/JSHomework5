@@ -17,7 +17,7 @@
 
 function randomNumberGen() {
 
-   let number =  Math.ceil(Math.random()) * 100;
+   let number =  parseInt(Math.floor(Math.random() * 100)) + 1;
    return number;
 
 }
@@ -25,47 +25,79 @@ function randomNumberGen() {
 // Function to reset the number
 function resetNumber() {
     let resetNumber = randomNumberGen();
+    console.log("reset the number");
 }
 
-// Function to reset the score, tries I get
+// Function to reset the tries
 function resetTries() {
 
-    let inputbox = document.getElementById("input");
-    inputbox. value = "";
-    innertext = "";
-    innertext = "";
+    let inputbox = document.getElementById("input").placeholder;
+    inputbox = "Enter a number";
+    let result = document.getElementById("result");
+    result.innertext = "";
+}
+
+// Function to reset the score
+
+function resetScore() {
+
+    let result = document.getElementById("result");
+    result.innertext = "";
+    correctAnswer = 0;
 }
 
 // get the number from the user
-let userNumber = document.getElementById("input");
+let userNumber = parseInt(document.getElementById("userinput").value);
+ console.log(userNumber);
 
 let randomNumber = randomNumberGen();
+console.log(randomNumber);
 
-let tries = 0;
+let result = document.getElementById("result");
+let tries = document.getElementById("tries");
+let score = document.getElementById("score");
+
+let triesDone = 0;
 let correctAnswer = 0;
 
 
-userNumber.addEventListener("click", function() {
+function guesses() {
 
+    let userNumber = parseInt(document.getElementById("userinput").value);
+        console.log(userNumber);
 
     if ( userNumber === randomNumber) {
 
+        console.log("userNumber " + userNumber);
         console.log("Congratulations you got the number");
-        tries++;
+        result.innerText = "Congratulations you got the number.";
+        correctAnswer++;
+        score.innerText = "You have " + correctAnswer + "number of correct answers";
+        triesDone++;
+        console.log("The number of tries is: ", triesDone);
+        tries.innerText = "You have " + triesDone + " tries.";
+        console.log("The number of correct answers ", correctAnswer);
     }
     else if ( userNumber > randomNumber) {
 
         console.log("The number is lower");
-        tries++;
-        correctAnswer++;
-        console.log("The number of tries is:", tries);
-        console.log("The number of correct answers:", correctAnswer);
+        result.innerText = "The number is lower";
+        triesDone++;
+        tries.innerText = "You have " + triesDone + " tries.";
+        console.log("The number of tries is: ", triesDone);
+        score.innerText = "You have " + correctAnswer + "number of correct answers";
     }
     else {
         console.log("The number is higher");
-        tries++;
+        console.log("userNumber " + userNumber);
+        result.innerText = "The number is higher";
+        triesDone++;
+        tries.innerText = "You have " + triesDone + " tries.";
+        console.log("The number of tries is: ", triesDone);
+        score.innerText = "You have " + correctAnswer + " number of correct answers";
+
 
     }
 
 
-})
+}

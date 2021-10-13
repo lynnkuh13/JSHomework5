@@ -54,6 +54,10 @@ input.placeholder {
      
  }
 
+ input[type='number']{
+    width: 140px;
+
+ }
 
 #btn {
 
@@ -92,7 +96,6 @@ input.placeholder {
     color: white;
     background-color: indigo;
     font-size: 20px;
-  
 
 }
 
@@ -102,11 +105,42 @@ input.placeholder {
 }
 
 #box {
-    border: solid 2px indigo;
-    width: 200px;
-    height: 200px;
+    border: solid 3px indigo;
+    width: 400px;
+    height: 400px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: indigo;
 }
+
+#result {
+
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: indigo;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+#tries {
+
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: indigo;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+#score {
+
+    font-size: 20px;
+    color: white;
+    background-color: indigo;
+    padding: 5px;
+    border-radius: 2px;
+}
+

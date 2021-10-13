@@ -7,18 +7,20 @@
     <div id="container">
             <h1>Number guessing game</h1>
             <div id="btn">
-                <input type="text" id="input" name="input" placeholder="Enter a number">
-                <button id="submit">Submit</button>
+                <input type="number" id="userinput" name="userinput" min="1" max="100" size="30">
+                <button onclick="guesses()" id="submit">Submit</button>
             </div>
             <div id="box">
                 <div id="result">Result</div>
+                <div id="tries">Tries</div>
+                <div id="score">Score</div>
             </div>
              <div id="btns">
-                <button id="resetNum">Reset the number</button>
-                <button id="resetScore">Reset the score</button>
+                <button onclick="resetNumber()" id="resetNum">Reset the number</button>
+                <button onclick="resetScore()" id="resetScore">Reset the score</button>
             </div>
         </div> 
    </div>
-    <script src="../css/index.js"></script>  
+    <script src="../js/index.js"></script>  
 </body>
 </html>
