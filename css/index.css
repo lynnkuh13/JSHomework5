@@ -99,6 +99,17 @@ input.placeholder {
 
 }
 
+#resetTries{
+
+    border-radius: 15px;
+    margin-left: 5px;
+    padding: 10px;
+    color: white;
+    background-color: indigo;
+    font-size: 20px;
+
+}
+
 #btns {
 
     margin: 60px;
@@ -120,9 +131,8 @@ input.placeholder {
     margin-bottom: 10px;
     font-size: 20px;
     color: white;
-    background-color: indigo;
     padding: 5px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 #tries {
@@ -130,17 +140,15 @@ input.placeholder {
     margin-bottom: 10px;
     font-size: 20px;
     color: white;
-    background-color: indigo;
     padding: 5px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 
 #score {
 
     font-size: 20px;
     color: white;
-    background-color: indigo;
     padding: 5px;
-    border-radius: 2px;
+    border-radius: 5px;
 }
 

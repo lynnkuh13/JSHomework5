@@ -7,7 +7,7 @@
     <div id="container">
             <h1>Number guessing game</h1>
             <div id="btn">
-                <input type="number" id="userinput" name="userinput" min="1" max="100" size="30">
+                <input type="text" id="userinput" name="userinput" min="1" max="100" size="30" placeholder="Enter a number">
                 <button onclick="guesses()" id="submit">Submit</button>
             </div>
             <div id="box">
@@ -16,8 +16,9 @@
                 <div id="score">Score</div>
             </div>
              <div id="btns">
-                <button onclick="resetNumber()" id="resetNum">Reset the number</button>
-                <button onclick="resetScore()" id="resetScore">Reset the score</button>
+                <button onclick="resetNumber(); textBoxFocus()" id="resetNum">Reset number</button>
+                <button onclick="resetScore(); textBoxFocus()" id="resetScore">Reset score</button>
+                <button onclick="resetTries(); textBoxFocus()" id="resetTries">Reset tries</button>
             </div>
         </div> 
    </div>
